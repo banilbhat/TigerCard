@@ -2,6 +2,7 @@ package tests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
@@ -22,7 +23,7 @@ public class JourniesPerDayTest {
     
     @Before
     public void init() throws CustomException, IOException{
-        RulesCreator.Test_Path = "bin\\";
+        RulesCreator.Test_Path = "bin" + File.separator;
         RulesCreator.init();
     }
     

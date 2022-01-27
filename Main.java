@@ -1,3 +1,4 @@
+import java.io.File;
 import java.util.List;
 
 import entities.Journey;
@@ -11,7 +12,7 @@ public class Main {
     public static void main(String args[]){
         try {
             RulesCreator.init();
-            List<String> inputlines = InputUtility.readInputLines("inputs\\input.txt");
+            List<String> inputlines = InputUtility.readInputLines("inputs"+ File.separator+"input.txt");
             List<Journey> journies = JourneyUtility.parseInputtoJournies(inputlines);
             FareCalculator  fareCalculator = new FareCalculator(journies);
             System.out.println("total fare: "+ fareCalculator.calculateFare());

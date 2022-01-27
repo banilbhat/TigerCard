@@ -3,6 +3,7 @@ package tests;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.junit.Test;
@@ -16,7 +17,7 @@ public class FareCappingUtilityTest {
     @Test
     public void testInput(){
         try {
-            RulesCreator.Test_Path = "bin\\";
+            RulesCreator.Test_Path = "bin" + File.separator;
             FareCappingUtility.init();
             FareCap fc11 = FareCappingUtility.fareCapMap.get("1-1");
             FareCap fc12 = FareCappingUtility.fareCapMap.get("1-2");

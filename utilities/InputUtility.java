@@ -12,6 +12,7 @@ public class InputUtility {
     public static  List<String> readInputLines(String fileName) throws IOException {
         List<String> inputlines = new ArrayList<>();
         File file = new File(fileName); // creates a new file instance
+        // System.out.println(file.getAbsolutePath()+ "ABSOLUTE PATH");
         FileReader fr = new FileReader(file); // reads the file
         BufferedReader br = new BufferedReader(fr); // creates a buffering character input stream
         String line;

@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
+import java.io.File;
 import java.io.IOException;
 import java.time.LocalTime;
 
@@ -19,7 +20,7 @@ public class PeakRulesUtilityTest {
     @Test
     public void testInput(){
         try {
-            RulesCreator.Test_Path = "bin\\";
+            RulesCreator.Test_Path = "bin" + File.separator;
             PeakRulesUtility.init();
             assertEquals(2, PeakRulesUtility.weekDayPeakTimes.size());
             assertEquals(2, PeakRulesUtility.weekendPeakTimes.size());

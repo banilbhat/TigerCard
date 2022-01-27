@@ -1,4 +1,5 @@
 package utilities;
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +25,7 @@ public class PeakRulesUtility{
     public static void init() throws CustomException, IOException{
         weekDayPeakTimes = new ArrayList<>();
         weekendPeakTimes = new ArrayList<>();
-        List<String> ruleLines = InputUtility.readInputLines(RulesCreator.Test_Path + "inputs\\peakrules.txt");
+        List<String> ruleLines = InputUtility.readInputLines(RulesCreator.Test_Path + "inputs" + File.separator + "peakrules.txt");
         parseInputtoPeakTimeRules(ruleLines);
     }
 

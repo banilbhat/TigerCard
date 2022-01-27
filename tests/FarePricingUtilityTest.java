@@ -3,6 +3,7 @@ package tests;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +21,7 @@ public class FarePricingUtilityTest {
     @Test
     public void testInput(){
         try {
-            RulesCreator.Test_Path = "bin\\";
+            RulesCreator.Test_Path = "bin" + File.separator;
             FarePricingUtility.init();
             FarePrice fp11 = FarePricingUtility.farePriceMap.get("1-1");
             FarePrice fp12 = FarePricingUtility.farePriceMap.get("1-2");
@@ -43,7 +44,7 @@ public class FarePricingUtilityTest {
     }
     @Test
     public void testFillFare() throws CustomException, IOException{
-        RulesCreator.Test_Path = "bin\\";
+        RulesCreator.Test_Path = "bin" + File.separator;
         RulesCreator.init();
         List<String> inputLines = new ArrayList<String>();
         inputLines.add("2020-08-01 10:20 2 1");

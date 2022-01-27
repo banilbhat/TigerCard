@@ -1,4 +1,5 @@
 package utilities;
+import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -10,7 +11,7 @@ public class FarePricingUtility {
     public static void init() throws CustomException, IOException{
         farePriceMap = new HashMap<>();
         // weekendPeakTimes = new ArrayList<>();
-        List<String> pricingLines = InputUtility.readInputLines(RulesCreator.Test_Path +"inputs\\farepricing.txt");
+        List<String> pricingLines = InputUtility.readInputLines(RulesCreator.Test_Path +"inputs"+File.separator+"farepricing.txt");
         parseInputtoFarePricing(pricingLines);
     }
 
